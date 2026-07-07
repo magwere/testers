@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lonas y Servicios | Toldas, Carpas, Lonas y Estructuras en Panama</title>
-    <meta name="description"
-        content="Lonas y Servicios: especialistas en toldas, carpas, lonas para transporte y estructuras en Panama. Calidad, durabilidad y diseno para residencias, comercios e industria.">
-    <meta name="keywords"
-        content="toldas Panama, carpas eventos, lonas para camiones, toldas industriales, toldas residenciales, tensoestructuras Panama">
+    <meta name="description" content="Lonas y Servicios: especialistas en toldas, carpas, lonas para transporte y estructuras en Panama. Calidad, durabilidad y diseno para residencias, comercios e industria.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -35,139 +31,46 @@
             }
         }
     </script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root {
-            --navy: #1a237e;
-            --orange: #ff6f00;
-            --gold: #ffc107;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        :root { --navy: #1a237e; --orange: #ff6f00; --gold: #ffc107; }
+        html { scroll-behavior: smooth; }
         .glass-nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
-
         .hero-section {
-            background: linear-gradient(135deg, rgba(26, 35, 126, 0.88) 0%, rgba(26, 35, 126, 0.75) 50%, rgba(26, 35, 126, 0.88) 100%), url('https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg
+            background: linear-gradient(135deg, rgba(26, 35, 126, 0.93) 0%, rgba(26, 35, 126, 0.88) 50%, rgba(26, 35, 126, 0.93) 100%), url('https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg');
+            background-size: cover;
             background-attachment: fixed;
             background-position: center;
         }
-
-        .wave-pattern {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-
-        .wave-pattern svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 80px;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .product-card {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(26, 35, 126, 0.15);
-        }
-
-        .product-card:hover .product-img {
-            transform: scale(1.08);
-        }
-
-        .product-img {
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .form-input {
-            border: none;
-            border-bottom: 2px solid #E5E7EB;
-            background: transparent;
-            transition: all 0.3s ease;
-        }
-
-        .form-input:focus {
-            border-bottom-color: var(--orange);
-            outline: none;
-            box-shadow: 0 4px 12px -4px rgba(255, 111, 0, 0.2);
-        }
-
-        .cert-badge {
-            transition: all 0.3s ease;
-            filter: grayscale(0.3);
-        }
-
-        .cert-badge:hover {
-            filter: grayscale(0);
-            transform: scale(1.05);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -5px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--orange);
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px var(--orange);
-        }
-
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
-
-        .lazy-img {
-            filter: blur(10px);
-            transition: filter 0.5s ease;
-        }
-
-        .lazy-img.loaded {
-            filter: blur(0);
-        }
+        .wave-pattern { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; }
+        .wave-pattern svg { position: relative; display: block; width: calc(100% + 1.3px); height: 80px; }
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .product-card { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgba(26, 35, 126, 0.15); }
+        .product-card:hover .product-img { transform: scale(1.08); }
+        .product-img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); width: 100%; height: 100%; object-fit: cover; }
+        .form-input { border: none; border-bottom: 2px solid #E5E7EB; background: transparent; transition: all 0.3s ease; }
+        .form-input:focus { border-bottom-color: var(--orange); outline: none; box-shadow: 0 4px 12px -4px rgba(255, 111, 0, 0.2); }
+        .cert-badge { transition: all 0.3s ease; filter: grayscale(0.3); }
+        .cert-badge:hover { filter: grayscale(0); transform: scale(1.05); }
+        .timeline-item::before { content: ''; position: absolute; left: -5px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--orange); border: 3px solid white; box-shadow: 0 0 0 3px var(--orange); }
+        .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .mobile-menu.open { transform: translateX(0); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--orange); transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
     </style>
 <base target="_blank">
 </head>
-
 <body class="bg-gray-50 font-body antialiased">
-    <header class="fixed w-full z-50 glass-nav border-b border-gray-200/50 shadow-sm transition-all duration-300" id="header">
+    <header class="fixed w-full z-50 glass-nav border-b border-gray-200/50" id="header">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <a href="#inicio" class="flex items-center space-x-2 group">
@@ -177,14 +80,14 @@
                     <span class="text-2xl font-extrabold tracking-tighter text-navy uppercase italic font-display">Lonas<span class="text-orange">yServicios</span></span>
                 </a>
                 <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#inicio" class="text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors relative group">Inicio<span class="absolute bottom-0 lef[...]
-                    <a href="#productos" class="text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors relative group">Productos<span class="absolute bottom[...]
-                    <a href="#proceso" class="text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors relative group">Proceso<span class="absolute bottom-0 l[...]
-                    <a href="#proyectos" class="text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors relative group">Proyectos<span class="absolute bottom[...]
-                    <a href="#contacto" class="text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors relative group">Contacto<span class="absolute bottom-0[...]
+                    <a href="#inicio" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Inicio</a>
+                    <a href="#productos" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Productos</a>
+                    <a href="#proceso" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Proceso</a>
+                    <a href="#proyectos" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Proyectos</a>
+                    <a href="#contacto" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Contacto</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <a href="#contacto" class="hidden md:inline-flex items-center gap-2 bg-orange hover:bg-orange-500 text-white px-6 py-2.5 rounded-lg text-[11px] font-extrabold uppercase tracki[...]
+                    <a href="#contacto" class="hidden md:inline-flex items-center gap-2 bg-orange hover:bg-orange-500 text-white px-6 py-2.5 rounded-lg text-[11px] font-extrabold uppercase tracking-widest transition shadow-lg shadow-orange/30">
                         <i class="fas fa-file-invoice"></i>Cotizar Ahora</a>
                     <button id="mobile-menu-btn" class="lg:hidden text-navy p-2"><i class="fas fa-bars text-xl"></i></button>
                 </div>
@@ -209,7 +112,6 @@
     </div>
 
     <main>
-        <!-- HERO SECTION -->
         <section id="inicio" class="hero-section min-h-screen flex items-center relative overflow-hidden pt-20">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-20 left-10 w-2 h-2 bg-orange/30 rounded-full animate-float"></div>
@@ -218,59 +120,58 @@
             </div>
             <div class="container mx-auto px-6 relative z-10">
                 <div class="max-w-5xl">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl text-white font-extrabold leading-[1.1] mb-6 uppercase font-display animate-fade-in-up">
-                        Lonas y Servicios: <br><span class="text-orange">Protección y Estilo</span><br><span class="text-3xl md:text-5xl lg:text-6xl font-light">Para Cada Espacio</span>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl text-white font-extrabold leading-[1.1] mb-6 uppercase font-display animate-fade-in-up" style="text-shadow: 0 4px 30px rgba(0,0,0,0.6);">
+                        Lonas y Servicios: <br><span class="text-orange">Proteccion y Estilo</span><br><span class="text-3xl md:text-5xl lg:text-6xl font-light">Para Cada Espacio</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed font-light max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed font-light max-w-2xl animate-fade-in-up" style="animation-delay: 0.2s; text-shadow: 0 2px 15px rgba(0,0,0,0.5);">
                         Soluciones integrales en toldas, carpas, lonas para transporte y estructuras para residencias, comercios e industria.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
-                        <a href="#contacto" class="bg-orange hover:bg-orange-500 text-white px-8 py-4 text-center font-bold text-sm uppercase tracking-widest rounded-lg transition">
-                            <i class="fas fa-paper-plane mr-2"></i>Solicitar Cotización Gratis</a>
-                        <a href="#proyectos" class="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-navy px-8 py-4 text-center font-bold text-sm uppercase rounded-lg transiti[...]
-                            <i class="fas fa-images mr-2"></i>Ver Galería</a>
+                        <a href="#contacto" class="bg-orange hover:bg-orange-500 text-white px-8 py-4 text-center font-bold text-sm uppercase tracking-widest rounded-lg transition shadow-xl shadow-orange/40">
+                            <i class="fas fa-paper-plane mr-2"></i>Solicitar Cotizacion Gratis</a>
+                        <a href="#proyectos" class="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-navy px-8 py-4 text-center font-bold text-sm uppercase rounded-lg transition backdrop-blur-sm">
+                            <i class="fas fa-images mr-2"></i>Ver Galeria</a>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-2xl">
                         <div class="text-center">
                             <div class="text-3xl font-extrabold text-orange font-display counter-value" data-target="500">0</div>
-                            <div class="text-xs text-gray-300 uppercase tracking-widest mt-1">Proyectos</div>
+                            <div class="text-xs text-gray-200 uppercase tracking-widest mt-1">Proyectos</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-extrabold text-orange font-display counter-value" data-target="10">0</div>
-                            <div class="text-xs text-gray-300 uppercase tracking-widest mt-1">Años Exp.</div>
+                            <div class="text-xs text-gray-200 uppercase tracking-widest mt-1">Anos Exp.</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-extrabold text-orange font-display counter-value" data-target="100">0</div>
-                            <div class="text-xs text-gray-300 uppercase tracking-widest mt-1">% Garantía</div>
+                            <div class="text-xs text-gray-200 uppercase tracking-widest mt-1">% Garantia</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-extrabold text-orange font-display counter-value" data-target="24">0</div>
-                            <div class="text-xs text-gray-300 uppercase tracking-widest mt-1">Hrs Respuesta</div>
+                            <div class="text-xs text-gray-200 uppercase tracking-widest mt-1">Hrs Respuesta</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="wave-pattern">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,[...]
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#f9fafb" opacity="1"></path>
                 </svg>
             </div>
         </section>
 
-        <!-- CERTIFICACIONES -->
-        <section class="py-12 bg-white border-b border-gray-100">
+        <section class="py-12 bg-gray-50 border-b border-gray-100">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div class="flex flex-wrap justify-center lg:justify-start gap-6 items-center">
-                        <div class="cert-badge flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
+                        <div class="cert-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
                             <i class="fas fa-shield-alt text-green-600 text-xl"></i>
-                            <div><span class="text-xs font-bold text-navy block">Garantía 5 Años</span></div>
+                            <div><span class="text-xs font-bold text-navy block">Garantia 5 Anos</span></div>
                         </div>
-                        <div class="cert-badge flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
+                        <div class="cert-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
                             <i class="fas fa-certificate text-blue-600 text-xl"></i>
                             <div><span class="text-xs font-bold text-navy block">Materiales Premium</span></div>
                         </div>
-                        <div class="cert-badge flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
+                        <div class="cert-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
                             <i class="fas fa-hard-hat text-orange text-xl"></i>
                             <div><span class="text-xs font-bold text-navy block">Montaje Profesional</span></div>
                         </div>
@@ -279,8 +180,7 @@
             </div>
         </section>
 
-        <!-- PROCESO -->
-        <section id="proceso" class="py-24 bg-gray-50">
+        <section id="proceso" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
                     <span class="text-xs font-bold text-orange uppercase tracking-widest">Proceso Transparente</span>
@@ -290,30 +190,30 @@
                     <div class="relative border-l-2 border-orange/30 ml-4 md:ml-0 space-y-12">
                         <div class="relative pl-8 md:pl-12 reveal">
                             <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
                                 <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 1: Consulta Gratuita</h3>
-                                <p class="text-sm text-gray-600">Evaluamos su espacio, medimos y analizamos sus necesidades específicas de protección.</p>
+                                <p class="text-sm text-gray-600">Evaluamos su espacio, medimos y analizamos sus necesidades especificas de proteccion.</p>
                             </div>
                         </div>
                         <div class="relative pl-8 md:pl-12 reveal">
                             <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 2: Diseño 3D</h3>
-                                <p class="text-sm text-gray-600">Presentamos planos 3D, selección de materiales y cotización detallada.</p>
+                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 2: Diseno 3D</h3>
+                                <p class="text-sm text-gray-600">Presentamos planos 3D, seleccion de materiales y cotizacion detallada.</p>
                             </div>
                         </div>
                         <div class="relative pl-8 md:pl-12 reveal">
                             <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 3: Fabricación</h3>
+                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 3: Fabricacion</h3>
                                 <p class="text-sm text-gray-600">Construimos con materiales premium: aluminio anodizado, acero galvanizado y lonas certificadas.</p>
                             </div>
                         </div>
                         <div class="relative pl-8 md:pl-12 reveal">
                             <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
                                 <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 4: Montaje Profesional</h3>
-                                <p class="text-sm text-gray-600">Instalación por equipo certificado. Entrega con garantía escrita de 5 años.</p>
+                                <p class="text-sm text-gray-600">Instalacion por equipo certificado. Entrega con garantia escrita de 5 anos.</p>
                             </div>
                         </div>
                     </div>
@@ -321,136 +221,126 @@
             </div>
         </section>
 
-        <!-- PRODUCTOS -->
-        <section id="productos" class="py-24 bg-white">
+        <section id="productos" class="py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
                     <span class="text-xs font-bold text-orange uppercase tracking-widest">Nuestros Productos</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-navy uppercase mt-3 tracking-tight font-display">Soluciones para Todo Tipo de Espacio</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Toldas Residenciales -->
-                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-64 overflow-hidden relative bg-gray-200 flex items-center justify-center">
-                            <img src="https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg" alt="Toldas Residenciales" class="product-img lazy-img">
-                            <div class="absolute top-4 right-4 bg-navy text-white text-[10px] px-3 py-1.5 font-bold uppercase rounded-md">Popular</div>
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg" alt="Toldas Residenciales" class="product-img">
+                            <div class="absolute top-4 right-4 bg-orange text-white text-[10px] px-3 py-1.5 font-bold uppercase rounded-md shadow-lg">Popular</div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                 <span class="text-white text-xs font-bold">Desde $350</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Toldas Residenciales</h4>
-                            <p class="text-xs text-gray-500 mb-4">Toldas fijas y retráctiles para terrazas, patios y jardines.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar → </a>
+                            <p class="text-xs text-gray-500 mb-4">Toldas fijas y retractiles para terrazas, patios y jardines.</p>
+                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
                         </div>
                     </article>
 
-                    <!-- Toldas Comerciales -->
-                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-64 overflow-hidden relative bg-gray-200 flex items-center justify-center">
-                            <img src="https://kimi-web-img.moonshot.cn/img/beljemi.com/952f1ce52e7191321e93f7151975044a14b3cbec.png" alt="Toldas Comerciales" class="product-img lazy-img">
-                            <div class="absolute top-4 right-4 bg-gold text-navy text-[10px] px-3 py-1.5 font-bold uppercase rounded-md">Comercial</div>
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="https://kimi-web-img.moonshot.cn/img/beljemi.com/952f1ce52e7191321e93f7151975044a14b3cbec.png" alt="Toldas Comerciales" class="product-img">
+                            <div class="absolute top-4 right-4 bg-gold text-navy text-[10px] px-3 py-1.5 font-bold uppercase rounded-md shadow-lg">Comercial</div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                 <span class="text-white text-xs font-bold">Desde $500</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Toldas Comerciales</h4>
-                            <p class="text-xs text-gray-500 mb-4">Restaurantes, cafeterías y tiendas con branding personalizado.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar → </a>
+                            <p class="text-xs text-gray-500 mb-4">Restaurantes, cafeteria y tiendas con branding personalizado.</p>
+                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
                         </div>
                     </article>
 
-                    <!-- Toldas Industriales -->
-                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-64 overflow-hidden relative bg-gray-200 flex items-center justify-center">
-                            <img src="https://kimi-web-img.moonshot.cn/img/edificacionesdinamicas.com/99b47ff272dd5a71ef9f7940f82d771c481a608a.png" alt="Toldas Industriales" class="product-img lazy-img">
-                            <div class="absolute top-4 right-4 bg-navy text-white text-[10px] px-3 py-1.5 font-bold uppercase rounded-md">Industrial</div>
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="https://kimi-web-img.moonshot.cn/img/edificacionesdinamicas.com/99b47ff272dd5a71ef9f7940f82d771c481a608a.png" alt="Toldas Industriales" class="product-img">
+                            <div class="absolute top-4 right-4 bg-navy text-white text-[10px] px-3 py-1.5 font-bold uppercase rounded-md shadow-lg">Industrial</div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                 <span class="text-white text-xs font-bold">Consultar</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Toldas Industriales</h4>
-                            <p class="text-xs text-gray-500 mb-4">Bodegas, galpones y cobertizos para áreas de trabajo.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar → </a>
+                            <p class="text-xs text-gray-500 mb-4">Bodegas, galpones y cobertizos para areas de trabajo.</p>
+                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
                         </div>
                     </article>
 
-                    <!-- Carpas para Eventos -->
-                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-64 overflow-hidden relative bg-gray-200 flex items-center justify-center">
-                            <img src="https://kimi-web-img.moonshot.cn/img/image.made-in-china.com/698ab92165f8d8a34cd16cfd2cb74e8fa5a0c0a2.webp" alt="Carpas para Eventos" class="product-img lazy-img">
-                            <div class="absolute top-4 right-4 bg-gold text-navy text-[10px] px-3 py-1.5 font-bold uppercase rounded-md">Eventos</div>
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
-                                <span class="text-white text-xs font-bold">Desde $200/día</span>
+                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="https://kimi-web-img.moonshot.cn/img/image.made-in-china.com/698ab92165f8d8a34cd16cfd2cb74e8fa5a0c0a2.webp" alt="Carpas para Eventos" class="product-img">
+                            <div class="absolute top-4 right-4 bg-gold text-navy text-[10px] px-3 py-1.5 font-bold uppercase rounded-md shadow-lg">Eventos</div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                                <span class="text-white text-xs font-bold">Desde $200/dia</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Carpas para Eventos</h4>
                             <p class="text-xs text-gray-500 mb-4">Alquiler y venta para bodas, ferias y eventos corporativos.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar → </a>
+                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
                         </div>
                     </article>
 
-                    <!-- Lonas para Transporte -->
-                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-64 overflow-hidden relative bg-gray-200 flex items-center justify-center">
-                            <img src="https://kimi-web-img.moonshot.cn/img/es.derflex-sign.com/54e18a62c2f01963b6a2aeb4726dba3b47bd0e21.jpg" alt="Lonas para Transporte" class="product-img lazy-img">
-                            <div class="absolute top-4 right-4 bg-navy text-white text-[10px] px-3 py-1.5 font-bold uppercase rounded-md">Transporte</div>
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="https://kimi-web-img.moonshot.cn/img/es.derflex-sign.com/54e18a62c2f01963b6a2aeb4726dba3b47bd0e21.jpg" alt="Lonas para Transporte" class="product-img">
+                            <div class="absolute top-4 right-4 bg-navy text-white text-[10px] px-3 py-1.5 font-bold uppercase rounded-md shadow-lg">Transporte</div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                 <span class="text-white text-xs font-bold">Desde $150</span>
                             </div>
                         </div>
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Lonas para Transporte</h4>
                             <p class="text-xs text-gray-500 mb-4">Impermeables para camiones, volquetes y pickups.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar → </a>
+                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
                         </div>
                     </article>
 
-                    <!-- Pérgolas y Estructuras -->
-                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                        <div class="h-64 overflow-hidden relative bg-gray-200 flex items-center justify-center">
-                            <img src="https://kimi-web-img.moonshot.cn/img/www.westerntimberframe.com/89b568d79f234f4c275715818b9200eaf5234e5d.jpg" alt="Pérgolas y Estructuras" class="product-img lazy-img">
-                            <div class="absolute top-4 right-4 bg-gold text-navy text-[10px] px-3 py-1.5 font-bold uppercase rounded-md">Premium</div>
-                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                    <article class="product-card group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                        <div class="h-64 overflow-hidden relative bg-gray-200">
+                            <img src="https://kimi-web-img.moonshot.cn/img/www.westerntimberframe.com/89b568d79f234f4c275715818b9200eaf5234e5d.jpg" alt="Pergolas y Estructuras" class="product-img">
+                            <div class="absolute top-4 right-4 bg-gold text-navy text-[10px] px-3 py-1.5 font-bold uppercase rounded-md shadow-lg">Premium</div>
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                                 <span class="text-white text-xs font-bold">Desde $800</span>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Pérgolas y Estructuras</h4>
+                            <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Pergolas y Estructuras</h4>
                             <p class="text-xs text-gray-500 mb-4">Madera, aluminio y policarbonato para jardines exclusivos.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar → </a>
+                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTOS -->
         <section id="proyectos" class="py-24 bg-navy text-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
-                    <span class="text-xs font-bold text-orange uppercase tracking-widest">Galería de Proyectos</span>
+                    <span class="text-xs font-bold text-orange uppercase tracking-widest">Galeria de Proyectos</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold uppercase mt-3 tracking-tight font-display">Nuestros Trabajos Realizados</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Proyecto Residencial -->
                     <div class="bg-white/5 rounded-2xl overflow-hidden reveal border border-white/10 hover:border-orange/50 transition group">
                         <div class="h-48 overflow-hidden relative bg-gray-700">
-                            <img src="https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg" alt="Proyecto Residencial Costa del Este" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500 lazy-img">
+                            <img src="https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg" alt="Proyecto Residencial Costa del Este" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
                         </div>
                         <div class="p-8 text-center">
                             <h3 class="text-xl font-bold mb-2">Proyecto Residencial Costa del Este</h3>
-                            <p class="text-gray-300 text-sm">Tolda retráctil motorizada para terraza de 50m²</p>
+                            <p class="text-gray-300 text-sm">Tolda retractil motorizada para terraza de 50m2</p>
                         </div>
                     </div>
 
-                    <!-- Restaurante Casco Viejo -->
                     <div class="bg-white/5 rounded-2xl overflow-hidden reveal border border-white/10 hover:border-orange/50 transition group">
                         <div class="h-48 overflow-hidden relative bg-gray-700">
-                            <img src="https://kimi-web-img.moonshot.cn/img/beljemi.com/952f1ce52e7191321e93f7151975044a14b3cbec.png" alt="Restaurante Casco Viejo" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500 lazy-img">
+                            <img src="https://kimi-web-img.moonshot.cn/img/beljemi.com/952f1ce52e7191321e93f7151975044a14b3cbec.png" alt="Restaurante Casco Viejo" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
                         </div>
                         <div class="p-8 text-center">
                             <h3 class="text-xl font-bold mb-2">Restaurante Casco Viejo</h3>
@@ -458,26 +348,24 @@
                         </div>
                     </div>
 
-                    <!-- Bodega Industrial -->
                     <div class="bg-white/5 rounded-2xl overflow-hidden reveal border border-white/10 hover:border-orange/50 transition group">
                         <div class="h-48 overflow-hidden relative bg-gray-700">
-                            <img src="https://kimi-web-img.moonshot.cn/img/edificacionesdinamicas.com/99b47ff272dd5a71ef9f7940f82d771c481a608a.png" alt="Bodega Industrial San Miguelito" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500 lazy-img">
+                            <img src="https://kimi-web-img.moonshot.cn/img/edificacionesdinamicas.com/99b47ff272dd5a71ef9f7940f82d771c481a608a.png" alt="Bodega Industrial San Miguelito" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
                         </div>
                         <div class="p-8 text-center">
                             <h3 class="text-xl font-bold mb-2">Bodega Industrial San Miguelito</h3>
-                            <p class="text-gray-300 text-sm">Estructura industrial para almacenamiento de 200m²</p>
+                            <p class="text-gray-300 text-sm">Estructura industrial para almacenamiento de 200m2</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACTO -->
         <section id="contacto" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
                     <span class="text-xs font-bold text-orange uppercase tracking-widest">Ponte en Contacto</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-navy uppercase mt-3 tracking-tight font-display">Solicita tu Cotización Gratis</h2>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-navy uppercase mt-3 tracking-tight font-display">Solicita tu Cotizacion Gratis</h2>
                 </div>
                 <div class="max-w-3xl mx-auto">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -485,7 +373,7 @@
                             <div class="w-16 h-16 bg-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fas fa-phone text-2xl text-orange"></i>
                             </div>
-                            <h3 class="font-bold text-navy mb-2">Teléfono</h3>
+                            <h3 class="font-bold text-navy mb-2">Telefono</h3>
                             <p class="text-gray-600">+507 6123-4567</p>
                         </div>
                         <div class="text-center">
@@ -499,8 +387,8 @@
                             <div class="w-16 h-16 bg-orange/10 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fas fa-map-marker-alt text-2xl text-orange"></i>
                             </div>
-                            <h3 class="font-bold text-navy mb-2">Ubicación</h3>
-                            <p class="text-gray-600">Panamá, República de Panamá</p>
+                            <h3 class="font-bold text-navy mb-2">Ubicacion</h3>
+                            <p class="text-gray-600">Panama, Republica de Panama</p>
                         </div>
                     </div>
 
@@ -508,21 +396,21 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label class="block text-sm font-bold text-navy mb-2">Nombre Completo</label>
-                                <input type="text" required class="form-input w-full text-navy" placeholder="Tu nombre">
+                                <input type="text" required class="form-input w-full text-navy py-2" placeholder="Tu nombre">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-navy mb-2">Email</label>
-                                <input type="email" required class="form-input w-full text-navy" placeholder="tu@email.com">
+                                <input type="email" required class="form-input w-full text-navy py-2" placeholder="tu@email.com">
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <label class="block text-sm font-bold text-navy mb-2">Teléfono</label>
-                                <input type="tel" required class="form-input w-full text-navy" placeholder="+507 6123-4567">
+                                <label class="block text-sm font-bold text-navy mb-2">Telefono</label>
+                                <input type="tel" required class="form-input w-full text-navy py-2" placeholder="+507 6123-4567">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-navy mb-2">Tipo de Producto</label>
-                                <select required class="form-input w-full text-navy">
+                                <select required class="form-input w-full text-navy py-2 bg-transparent">
                                     <option value="">Selecciona un producto</option>
                                     <option>Tolda Residencial</option>
                                     <option>Tolda Comercial</option>
@@ -533,10 +421,10 @@
                             </div>
                         </div>
                         <div class="mb-6">
-                            <label class="block text-sm font-bold text-navy mb-2">Cuéntanos sobre tu proyecto</label>
-                            <textarea required class="form-input w-full text-navy" rows="4" placeholder="Describa sus necesidades..."></textarea>
+                            <label class="block text-sm font-bold text-navy mb-2">Cuentanos sobre tu proyecto</label>
+                            <textarea required class="form-input w-full text-navy py-2" rows="4" placeholder="Describa sus necesidades..."></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-orange hover:bg-orange-500 text-white font-bold py-3 rounded-lg uppercase tracking-widest transition">
+                        <button type="submit" class="w-full bg-orange hover:bg-orange-500 text-white font-bold py-3 rounded-lg uppercase tracking-widest transition shadow-lg shadow-orange/30">
                             Enviar Solicitud
                         </button>
                     </form>
@@ -545,13 +433,12 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="bg-navy text-white py-12 border-t border-white/10">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h4 class="font-bold text-lg mb-4">Lonas y Servicios</h4>
-                    <p class="text-gray-300 text-sm">Soluciones integrales en toldas, carpas y estructuras en Panamá.</p>
+                    <p class="text-gray-300 text-sm">Soluciones integrales en toldas, carpas y estructuras en Panama.</p>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Productos</h4>
@@ -585,42 +472,33 @@
     </footer>
 
     <script>
-        // Mobile Menu
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.add('open');
         });
-
         document.getElementById('mobile-menu-close').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.remove('open');
         });
 
-        // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
-
         function reveal() {
             reveals.forEach(element => {
                 const windowHeight = window.innerHeight;
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-
                 if (elementTop < windowHeight - elementVisible) {
                     element.classList.add('active');
                 }
             });
         }
-
         window.addEventListener('scroll', reveal);
         reveal();
 
-        // Counter animation
         const counters = document.querySelectorAll('.counter-value');
-
         function animateCounters() {
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-target'));
                 let count = 0;
                 const increment = target / 30;
-
                 const interval = setInterval(() => {
                     count += increment;
                     if (count >= target) {
@@ -632,7 +510,6 @@
                 }, 30);
             });
         }
-
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100 && !document.body.classList.contains('counters-animated')) {
                 document.body.classList.add('counters-animated');
@@ -640,26 +517,11 @@
             }
         }, { once: true });
 
-        // Form submission
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('¡Gracias por tu solicitud! Nos pondremos en contacto pronto.');
+            alert('Gracias por tu solicitud! Nos pondremos en contacto pronto.');
             document.getElementById('contactForm').reset();
         });
-
-        // Lazy load images
-        const images = document.querySelectorAll('.lazy-img');
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('loaded');
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-
-        images.forEach(img => imageObserver.observe(img));
     </script>
 </body>
-
 </html>
