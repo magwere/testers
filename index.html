@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lonas y Servicios | Toldas, Carpas, Lonas y Estructuras en Panama</title>
-    <meta name="description" content="Lonas y Servicios: especialistas en toldas, carpas, lonas para transporte y estructuras en Panama. Calidad, durabilidad y diseno para residencias, comercios e industria.">
+    <title>Lonas y Servicios | Cotizador Online - Toldas, Carpas, Estructuras Panama</title>
+    <meta name="description" content="Cotiza tu tolda, carpa o estructura al instante. Lonas y Servicios: especialistas en toldas, carpas, lonas para transporte y estructuras en Panama.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -66,6 +66,97 @@
         .nav-link { position: relative; }
         .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--orange); transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
+
+        /* COTIZADOR STYLES */
+        .cotizador-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 25px 80px rgba(26,35,126,0.15);
+        }
+        .product-chip {
+            padding: 16px 8px;
+            border-radius: 16px;
+            border: 2px solid #e5e7eb;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .product-chip:hover { border-color: #ff8f00; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(255,111,0,0.15); }
+        .product-chip.active { border-color: #ff6f00; background: rgba(255,111,0,0.05); box-shadow: 0 8px 24px rgba(255,111,0,0.2); }
+        .product-chip .chip-icon { font-size: 32px; margin-bottom: 6px; }
+        .product-chip .chip-label { font-size: 11px; font-weight: 700; text-transform: uppercase; color: #1a237e; font-family: 'Montserrat', sans-serif; }
+        .product-chip .chip-price { font-size: 10px; color: #ff6f00; font-weight: 700; margin-top: 2px; }
+
+        .estimate-box {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            border-radius: 20px;
+            padding: 28px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .estimate-box::before {
+            content: ''; position: absolute; top: -40px; right: -40px;
+            width: 120px; height: 120px; background: rgba(255,111,0,0.12);
+            border-radius: 50%;
+        }
+        .estimate-label { font-size: 11px; text-transform: uppercase; letter-spacing: 2px; opacity: 0.8; margin-bottom: 8px; }
+        .estimate-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 48px; color: #ff6f00; line-height: 1; }
+        .estimate-price span { font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.7); }
+        .estimate-range { font-size: 13px; opacity: 0.9; margin-top: 8px; }
+        .estimate-note { font-size: 11px; opacity: 0.6; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); }
+
+        .btn-cotizar {
+            width: 100%; padding: 18px;
+            background: #ff6f00; color: white;
+            border: none; border-radius: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800; font-size: 14px;
+            text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(255,111,0,0.35);
+            transition: all 0.3s ease;
+        }
+        .btn-cotizar:hover { background: #ff8f00; transform: translateY(-2px); box-shadow: 0 14px 40px rgba(255,111,0,0.45); }
+
+        .result-panel {
+            display: none;
+            animation: slideUp 0.5s ease;
+        }
+        .result-panel.show { display: block; }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .result-total-box {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            border-radius: 20px; padding: 28px; text-align: center; color: white;
+        }
+        .btn-whatsapp {
+            width: 100%; padding: 18px;
+            background: #25d366; color: white;
+            border: none; border-radius: 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800; font-size: 14px;
+            text-transform: uppercase; letter-spacing: 1px;
+            cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.3);
+            transition: all 0.3s ease; text-decoration: none;
+        }
+        .btn-whatsapp:hover { background: #128c7e; transform: translateY(-2px); }
+
+        .pulse-dot {
+            display: inline-block; width: 10px; height: 10px;
+            background: #22c55e; border-radius: 50%;
+            margin-right: 8px; animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(34,197,94,0); }
+            100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+        }
     </style>
 <base target="_blank">
 </head>
@@ -81,14 +172,14 @@
                 </a>
                 <nav class="hidden lg:flex items-center space-x-8">
                     <a href="#inicio" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Inicio</a>
+                    <a href="#cotizador" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Cotizar</a>
                     <a href="#productos" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Productos</a>
                     <a href="#proceso" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Proceso</a>
-                    <a href="#proyectos" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Proyectos</a>
                     <a href="#contacto" class="nav-link text-[13px] font-bold tracking-widest text-navy uppercase hover:text-orange transition-colors">Contacto</a>
                 </nav>
                 <div class="flex items-center space-x-4">
-                    <a href="#contacto" class="hidden md:inline-flex items-center gap-2 bg-orange hover:bg-orange-500 text-white px-6 py-2.5 rounded-lg text-[11px] font-extrabold uppercase tracking-widest transition shadow-lg shadow-orange/30">
-                        <i class="fas fa-file-invoice"></i>Cotizar Ahora</a>
+                    <a href="#cotizador" class="hidden md:inline-flex items-center gap-2 bg-orange hover:bg-orange-500 text-white px-6 py-2.5 rounded-lg text-[11px] font-extrabold uppercase tracking-widest transition shadow-lg shadow-orange/30">
+                        <i class="fas fa-calculator"></i>Cotizar Ahora</a>
                     <button id="mobile-menu-btn" class="lg:hidden text-navy p-2"><i class="fas fa-bars text-xl"></i></button>
                 </div>
             </div>
@@ -103,15 +194,16 @@
             </div>
             <nav class="flex flex-col space-y-6">
                 <a href="#inicio" class="text-xl font-bold uppercase tracking-widest hover:text-orange transition">Inicio</a>
+                <a href="#cotizador" class="text-xl font-bold uppercase tracking-widest hover:text-orange transition">Cotizar</a>
                 <a href="#productos" class="text-xl font-bold uppercase tracking-widest hover:text-orange transition">Productos</a>
                 <a href="#proceso" class="text-xl font-bold uppercase tracking-widest hover:text-orange transition">Proceso</a>
-                <a href="#proyectos" class="text-xl font-bold uppercase tracking-widest hover:text-orange transition">Proyectos</a>
                 <a href="#contacto" class="text-xl font-bold uppercase tracking-widest hover:text-orange transition">Contacto</a>
             </nav>
         </div>
     </div>
 
     <main>
+        <!-- HERO -->
         <section id="inicio" class="hero-section min-h-screen flex items-center relative overflow-hidden pt-20">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-20 left-10 w-2 h-2 bg-orange/30 rounded-full animate-float"></div>
@@ -127,10 +219,10 @@
                         Soluciones integrales en toldas, carpas, lonas para transporte y estructuras para residencias, comercios e industria.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style="animation-delay: 0.4s;">
-                        <a href="#contacto" class="bg-orange hover:bg-orange-500 text-white px-8 py-4 text-center font-bold text-sm uppercase tracking-widest rounded-lg transition shadow-xl shadow-orange/40">
-                            <i class="fas fa-paper-plane mr-2"></i>Solicitar Cotizacion Gratis</a>
-                        <a href="#proyectos" class="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-navy px-8 py-4 text-center font-bold text-sm uppercase rounded-lg transition backdrop-blur-sm">
-                            <i class="fas fa-images mr-2"></i>Ver Galeria</a>
+                        <a href="#cotizador" class="bg-orange hover:bg-orange-500 text-white px-8 py-4 text-center font-bold text-sm uppercase tracking-widest rounded-lg transition shadow-xl shadow-orange/40">
+                            <i class="fas fa-calculator mr-2"></i>Cotizar Ahora</a>
+                        <a href="#productos" class="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-navy px-8 py-4 text-center font-bold text-sm uppercase rounded-lg transition backdrop-blur-sm">
+                            <i class="fas fa-images mr-2"></i>Ver Productos</a>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-2xl">
                         <div class="text-center">
@@ -159,69 +251,140 @@
             </div>
         </section>
 
-        <section class="py-12 bg-gray-50 border-b border-gray-100">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
-                    <div class="flex flex-wrap justify-center lg:justify-start gap-6 items-center">
-                        <div class="cert-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
-                            <i class="fas fa-shield-alt text-green-600 text-xl"></i>
-                            <div><span class="text-xs font-bold text-navy block">Garantia 5 Anos</span></div>
+        <!-- COTIZADOR INTERACTIVO -->
+        <section id="cotizador" class="py-24 bg-gray-50 relative">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <div class="text-center mb-12 reveal">
+                    <span class="text-xs font-bold text-orange uppercase tracking-widest">Cotizador Online</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-navy uppercase mt-3 tracking-tight font-display">Configure y Cotice al Instante</h2>
+                    <p class="text-gray-600 mt-4 max-w-xl mx-auto">Seleccione su producto, ingrese las medidas y reciba una estimacion inmediata. Sin compromiso.</p>
+                </div>
+
+                <div id="configPanel" class="cotizador-card p-8 md:p-10 reveal">
+                    <div class="flex items-center justify-center mb-8">
+                        <span class="pulse-dot"></span>
+                        <span class="text-sm font-bold text-green-700">Configurador activo</span>
+                    </div>
+
+                    <h3 class="font-display font-bold text-lg text-navy uppercase tracking-wide text-center mb-6">Que necesita?</h3>
+
+                    <div class="grid grid-cols-3 md:grid-cols-6 gap-3 mb-8" id="productGrid">
+                        <div class="product-chip active" data-product="residencial" data-base="350" data-factor="45">
+                            <div class="chip-icon">🏠</div>
+                            <div class="chip-label">Residencial</div>
+                            <div class="chip-price">Desde $350</div>
                         </div>
-                        <div class="cert-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
-                            <i class="fas fa-certificate text-blue-600 text-xl"></i>
-                            <div><span class="text-xs font-bold text-navy block">Materiales Premium</span></div>
+                        <div class="product-chip" data-product="comercial" data-base="500" data-factor="65">
+                            <div class="chip-icon">🏪</div>
+                            <div class="chip-label">Comercial</div>
+                            <div class="chip-price">Desde $500</div>
                         </div>
-                        <div class="cert-badge flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-gray-200 shadow-sm">
-                            <i class="fas fa-hard-hat text-orange text-xl"></i>
-                            <div><span class="text-xs font-bold text-navy block">Montaje Profesional</span></div>
+                        <div class="product-chip" data-product="industrial" data-base="800" data-factor="90">
+                            <div class="chip-icon">🏭</div>
+                            <div class="chip-label">Industrial</div>
+                            <div class="chip-price">Consultar</div>
+                        </div>
+                        <div class="product-chip" data-product="eventos" data-base="200" data-factor="35">
+                            <div class="chip-icon">🎪</div>
+                            <div class="chip-label">Eventos</div>
+                            <div class="chip-price">$200/dia</div>
+                        </div>
+                        <div class="product-chip" data-product="transporte" data-base="150" data-factor="25">
+                            <div class="chip-icon">🚛</div>
+                            <div class="chip-label">Transporte</div>
+                            <div class="chip-price">Desde $150</div>
+                        </div>
+                        <div class="product-chip" data-product="pergola" data-base="800" data-factor="120">
+                            <div class="chip-icon">🌿</div>
+                            <div class="chip-label">Pergola</div>
+                            <div class="chip-price">Desde $800</div>
                         </div>
                     </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label class="block text-xs font-bold text-navy uppercase tracking-wider mb-2">Largo (metros)</label>
+                            <input type="number" id="length" value="4" min="1" max="50" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange focus:outline-none transition text-navy font-bold text-center text-lg">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-navy uppercase tracking-wider mb-2">Ancho (metros)</label>
+                            <input type="number" id="width" value="3" min="1" max="50" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange focus:outline-none transition text-navy font-bold text-center text-lg">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="block text-xs font-bold text-navy uppercase tracking-wider mb-2">Material preferido</label>
+                        <select id="material" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-orange focus:outline-none transition text-navy bg-white">
+                            <option value="1.0">Lona PVC estandar (resistencia UV) - Base</option>
+                            <option value="1.3">Lona PVC reforzada (alta durabilidad) - +30%</option>
+                            <option value="1.6">Tela acrilica premium (transpirable) - +60%</option>
+                            <option value="2.0">Policarbonato / Composite - +100%</option>
+                        </select>
+                    </div>
+
+                    <div class="estimate-box mb-6">
+                        <div class="estimate-label">Estimacion de inversion</div>
+                        <div class="estimate-price" id="estimatePrice">$630<span> USD</span></div>
+                        <div class="estimate-range" id="estimateRange">Rango: $567 - $693 USD</div>
+                        <div class="estimate-note">*Precio estimado. La cotizacion final depende de la visita tecnica y mediciones exactas en sitio.</div>
+                    </div>
+
+                    <button class="btn-cotizar" onclick="showResult()">
+                        <i class="fas fa-file-invoice mr-2"></i>Generar Cotizacion Oficial
+                    </button>
+
+                    <div class="flex justify-center gap-6 mt-6 text-xs text-gray-500">
+                        <span><i class="fas fa-shield-alt text-orange mr-1"></i>Garantia 5 anos</span>
+                        <span><i class="fas fa-truck text-orange mr-1"></i>Instalacion incluida</span>
+                        <span><i class="fas fa-check-circle text-orange mr-1"></i>Materiales certificados</span>
+                    </div>
+                </div>
+
+                <!-- RESULT PANEL -->
+                <div id="resultPanel" class="result-panel cotizador-card p-8 md:p-10 mt-6">
+                    <div class="text-center mb-8">
+                        <div class="w-14 h-14 bg-orange rounded-xl flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl font-display">LS</div>
+                        <h3 class="font-display font-bold text-xl text-navy uppercase">Cotizacion Lonas y Servicios</h3>
+                        <p class="text-sm text-gray-500 mt-1">Validez: 15 dias | Panama, 2026</p>
+                    </div>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4">
+                            <span class="text-sm text-gray-600">Producto</span>
+                            <span class="font-bold text-navy text-sm" id="resProduct">Tolda Residencial</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4">
+                            <span class="text-sm text-gray-600">Dimensiones</span>
+                            <span class="font-bold text-navy text-sm" id="resDim">4m x 3m = 12m2</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4">
+                            <span class="text-sm text-gray-600">Material</span>
+                            <span class="font-bold text-navy text-sm" id="resMaterial">Lona PVC estandar</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-gray-50 rounded-xl p-4">
+                            <span class="text-sm text-gray-600">Instalacion profesional</span>
+                            <span class="font-bold text-orange text-sm">INCLUIDA</span>
+                        </div>
+                    </div>
+
+                    <div class="result-total-box mb-6">
+                        <div class="text-xs uppercase tracking-widest opacity-80 mb-2">Total estimado</div>
+                        <div class="text-5xl font-black text-orange font-display" id="resTotal">$630 USD</div>
+                    </div>
+
+                    <a href="#" class="btn-whatsapp" id="waLink" target="_blank">
+                        <i class="fab fa-whatsapp text-xl"></i> Enviar por WhatsApp y Confirmar
+                    </a>
+
+                    <button onclick="resetForm()" class="w-full mt-4 py-3 border-2 border-gray-200 rounded-xl text-navy font-bold text-sm uppercase tracking-wider hover:border-orange hover:text-orange transition">
+                        <i class="fas fa-redo mr-2"></i>Nueva cotizacion
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section id="proceso" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 reveal">
-                    <span class="text-xs font-bold text-orange uppercase tracking-widest">Proceso Transparente</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-navy uppercase mt-3 tracking-tight font-display">De la Idea a la Realidad</h2>
-                </div>
-                <div class="max-w-4xl mx-auto">
-                    <div class="relative border-l-2 border-orange/30 ml-4 md:ml-0 space-y-12">
-                        <div class="relative pl-8 md:pl-12 reveal">
-                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 1: Consulta Gratuita</h3>
-                                <p class="text-sm text-gray-600">Evaluamos su espacio, medimos y analizamos sus necesidades especificas de proteccion.</p>
-                            </div>
-                        </div>
-                        <div class="relative pl-8 md:pl-12 reveal">
-                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 2: Diseno 3D</h3>
-                                <p class="text-sm text-gray-600">Presentamos planos 3D, seleccion de materiales y cotizacion detallada.</p>
-                            </div>
-                        </div>
-                        <div class="relative pl-8 md:pl-12 reveal">
-                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 3: Fabricacion</h3>
-                                <p class="text-sm text-gray-600">Construimos con materiales premium: aluminio anodizado, acero galvanizado y lonas certificadas.</p>
-                            </div>
-                        </div>
-                        <div class="relative pl-8 md:pl-12 reveal">
-                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
-                            <div class="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
-                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 4: Montaje Profesional</h3>
-                                <p class="text-sm text-gray-600">Instalacion por equipo certificado. Entrega con garantia escrita de 5 anos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="productos" class="py-24 bg-gray-50">
+        <!-- PRODUCTOS -->
+        <section id="productos" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
                     <span class="text-xs font-bold text-orange uppercase tracking-widest">Nuestros Productos</span>
@@ -239,7 +402,7 @@
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Toldas Residenciales</h4>
                             <p class="text-xs text-gray-500 mb-4">Toldas fijas y retractiles para terrazas, patios y jardines.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
+                            <a href="#cotizador" class="text-xs font-bold text-orange hover:text-navy transition">Cotizar ahora &rarr;</a>
                         </div>
                     </article>
 
@@ -254,7 +417,7 @@
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Toldas Comerciales</h4>
                             <p class="text-xs text-gray-500 mb-4">Restaurantes, cafeteria y tiendas con branding personalizado.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
+                            <a href="#cotizador" class="text-xs font-bold text-orange hover:text-navy transition">Cotizar ahora &rarr;</a>
                         </div>
                     </article>
 
@@ -269,7 +432,7 @@
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Toldas Industriales</h4>
                             <p class="text-xs text-gray-500 mb-4">Bodegas, galpones y cobertizos para areas de trabajo.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
+                            <a href="#cotizador" class="text-xs font-bold text-orange hover:text-navy transition">Cotizar ahora &rarr;</a>
                         </div>
                     </article>
 
@@ -284,7 +447,7 @@
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Carpas para Eventos</h4>
                             <p class="text-xs text-gray-500 mb-4">Alquiler y venta para bodas, ferias y eventos corporativos.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
+                            <a href="#cotizador" class="text-xs font-bold text-orange hover:text-navy transition">Cotizar ahora &rarr;</a>
                         </div>
                     </article>
 
@@ -299,7 +462,7 @@
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Lonas para Transporte</h4>
                             <p class="text-xs text-gray-500 mb-4">Impermeables para camiones, volquetes y pickups.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
+                            <a href="#cotizador" class="text-xs font-bold text-orange hover:text-navy transition">Cotizar ahora &rarr;</a>
                         </div>
                     </article>
 
@@ -314,13 +477,56 @@
                         <div class="p-6">
                             <h4 class="font-bold text-navy mb-2 uppercase text-sm tracking-wide font-display">Pergolas y Estructuras</h4>
                             <p class="text-xs text-gray-500 mb-4">Madera, aluminio y policarbonato para jardines exclusivos.</p>
-                            <a href="#contacto" class="text-xs font-bold text-orange hover:text-navy transition">Solicitar &rarr;</a>
+                            <a href="#cotizador" class="text-xs font-bold text-orange hover:text-navy transition">Cotizar ahora &rarr;</a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- PROCESO -->
+        <section id="proceso" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <span class="text-xs font-bold text-orange uppercase tracking-widest">Proceso Transparente</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-navy uppercase mt-3 tracking-tight font-display">De la Idea a la Realidad</h2>
+                </div>
+                <div class="max-w-4xl mx-auto">
+                    <div class="relative border-l-2 border-orange/30 ml-4 md:ml-0 space-y-12">
+                        <div class="relative pl-8 md:pl-12 reveal">
+                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
+                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 1: Consulta Gratuita</h3>
+                                <p class="text-sm text-gray-600">Evaluamos su espacio, medimos y analizamos sus necesidades especificas de proteccion.</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8 md:pl-12 reveal">
+                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
+                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 2: Diseno 3D</h3>
+                                <p class="text-sm text-gray-600">Presentamos planos 3D, seleccion de materiales y cotizacion detallada.</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8 md:pl-12 reveal">
+                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
+                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 3: Fabricacion</h3>
+                                <p class="text-sm text-gray-600">Construimos con materiales premium: aluminio anodizado, acero galvanizado y lonas certificadas.</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8 md:pl-12 reveal">
+                            <div class="timeline-item absolute left-0 top-0 md:left-[-5px]"></div>
+                            <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100">
+                                <h3 class="text-lg font-bold text-navy font-display mb-2">Paso 4: Montaje Profesional</h3>
+                                <p class="text-sm text-gray-600">Instalacion por equipo certificado. Entrega con garantia escrita de 5 anos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROYECTOS -->
         <section id="proyectos" class="py-24 bg-navy text-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
@@ -330,27 +536,25 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white/5 rounded-2xl overflow-hidden reveal border border-white/10 hover:border-orange/50 transition group">
                         <div class="h-48 overflow-hidden relative bg-gray-700">
-                            <img src="https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg" alt="Proyecto Residencial Costa del Este" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
+                            <img src="https://kimi-web-img.moonshot.cn/img/www.toldosartazcoz.es/641f785704e12f57dbb1d094396917b5a76c3087.jpg" alt="Proyecto Residencial" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
                         </div>
                         <div class="p-8 text-center">
                             <h3 class="text-xl font-bold mb-2">Proyecto Residencial Costa del Este</h3>
                             <p class="text-gray-300 text-sm">Tolda retractil motorizada para terraza de 50m2</p>
                         </div>
                     </div>
-
                     <div class="bg-white/5 rounded-2xl overflow-hidden reveal border border-white/10 hover:border-orange/50 transition group">
                         <div class="h-48 overflow-hidden relative bg-gray-700">
-                            <img src="https://kimi-web-img.moonshot.cn/img/beljemi.com/952f1ce52e7191321e93f7151975044a14b3cbec.png" alt="Restaurante Casco Viejo" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
+                            <img src="https://kimi-web-img.moonshot.cn/img/beljemi.com/952f1ce52e7191321e93f7151975044a14b3cbec.png" alt="Restaurante" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
                         </div>
                         <div class="p-8 text-center">
                             <h3 class="text-xl font-bold mb-2">Restaurante Casco Viejo</h3>
                             <p class="text-gray-300 text-sm">Tolda comercial con logo corporativo impreso</p>
                         </div>
                     </div>
-
                     <div class="bg-white/5 rounded-2xl overflow-hidden reveal border border-white/10 hover:border-orange/50 transition group">
                         <div class="h-48 overflow-hidden relative bg-gray-700">
-                            <img src="https://kimi-web-img.moonshot.cn/img/edificacionesdinamicas.com/99b47ff272dd5a71ef9f7940f82d771c481a608a.png" alt="Bodega Industrial San Miguelito" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
+                            <img src="https://kimi-web-img.moonshot.cn/img/edificacionesdinamicas.com/99b47ff272dd5a71ef9f7940f82d771c481a608a.png" alt="Bodega" class="w-full h-full object-cover group-hover:scale-110 transition transform duration-500">
                         </div>
                         <div class="p-8 text-center">
                             <h3 class="text-xl font-bold mb-2">Bodega Industrial San Miguelito</h3>
@@ -361,6 +565,7 @@
             </div>
         </section>
 
+        <!-- CONTACTO -->
         <section id="contacto" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
@@ -472,6 +677,7 @@
     </footer>
 
     <script>
+        // Mobile Menu
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.add('open');
         });
@@ -479,6 +685,7 @@
             document.getElementById('mobile-menu').classList.remove('open');
         });
 
+        // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
         function reveal() {
             reveals.forEach(element => {
@@ -493,6 +700,7 @@
         window.addEventListener('scroll', reveal);
         reveal();
 
+        // Counter animation
         const counters = document.querySelectorAll('.counter-value');
         function animateCounters() {
             counters.forEach(counter => {
@@ -517,11 +725,91 @@
             }
         }, { once: true });
 
+        // Contact form
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Gracias por tu solicitud! Nos pondremos en contacto pronto.');
             document.getElementById('contactForm').reset();
         });
+
+        // ===== COTIZADOR LOGIC =====
+        let selectedProduct = 'residencial';
+        let basePrice = 350;
+        let factor = 45;
+
+        const productNames = {
+            residencial: 'Tolda Residencial',
+            comercial: 'Tolda Comercial',
+            industrial: 'Tolda Industrial',
+            eventos: 'Carpa para Eventos',
+            transporte: 'Lona para Transporte',
+            pergola: 'Pergola / Estructura'
+        };
+
+        const materialNames = {
+            '1.0': 'Lona PVC estandar',
+            '1.3': 'Lona PVC reforzada',
+            '1.6': 'Tela acrilica premium',
+            '2.0': 'Policarbonato / Composite'
+        };
+
+        document.querySelectorAll('.product-chip').forEach(chip => {
+            chip.addEventListener('click', function() {
+                document.querySelectorAll('.product-chip').forEach(c => c.classList.remove('active'));
+                this.classList.add('active');
+                selectedProduct = this.dataset.product;
+                basePrice = parseInt(this.dataset.base);
+                factor = parseInt(this.dataset.factor);
+                calculate();
+            });
+        });
+
+        document.getElementById('length').addEventListener('input', calculate);
+        document.getElementById('width').addEventListener('input', calculate);
+        document.getElementById('material').addEventListener('change', calculate);
+
+        function calculate() {
+            const length = parseFloat(document.getElementById('length').value) || 1;
+            const width = parseFloat(document.getElementById('width').value) || 1;
+            const materialMult = parseFloat(document.getElementById('material').value);
+            const area = length * width;
+            let price = (basePrice + (area * factor)) * materialMult;
+            price = Math.round(price);
+            const minPrice = Math.round(price * 0.9);
+            const maxPrice = Math.round(price * 1.1);
+            document.getElementById('estimatePrice').innerHTML = '$' + price.toLocaleString() + '<span> USD</span>';
+            document.getElementById('estimateRange').textContent = 'Rango: $' + minPrice.toLocaleString() + ' - $' + maxPrice.toLocaleString() + ' USD';
+        }
+
+        function showResult() {
+            const length = parseFloat(document.getElementById('length').value) || 1;
+            const width = parseFloat(document.getElementById('width').value) || 1;
+            const materialVal = document.getElementById('material').value;
+            const materialMult = parseFloat(materialVal);
+            const area = length * width;
+            let price = (basePrice + (area * factor)) * materialMult;
+            price = Math.round(price);
+
+            document.getElementById('resProduct').textContent = productNames[selectedProduct];
+            document.getElementById('resDim').textContent = length + 'm x ' + width + 'm = ' + area + 'm2';
+            document.getElementById('resMaterial').textContent = materialNames[materialVal];
+            document.getElementById('resTotal').textContent = '$' + price.toLocaleString() + ' USD';
+
+            const msg = 'Hola Lonas y Servicios, vi su cotizador web y quiero confirmar mi cotizacion: ' + productNames[selectedProduct] + ', ' + area + 'm2, ' + materialNames[materialVal] + '. Total estimado: $' + price + ' USD.';
+            document.getElementById('waLink').href = 'https://wa.me/50761234567?text=' + encodeURIComponent(msg);
+
+            document.getElementById('configPanel').style.display = 'none';
+            document.getElementById('resultPanel').classList.add('show');
+            document.getElementById('resultPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function resetForm() {
+            document.getElementById('resultPanel').classList.remove('show');
+            document.getElementById('configPanel').style.display = 'block';
+            document.getElementById('configPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        calculate();
     </script>
 </body>
 </html>
